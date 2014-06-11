@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>square to circle</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            outline: 1px solid transparent; /* prevent jagged lines in firefox */
+            -webkit-animation: square-to-circle 2s 1s infinite cubic-bezier(1,.015,.295,1.225) alternate;
+            animation: square-to-circle 2s 1s infinite cubic-bezier(1,.015,.295,1.225) alternate;
+        }
+        @-webkit-keyframes square-to-circle {
+            0%  {
+                border-radius:0 0 0 0;
+                background:coral;
+                transform:rotate(0deg);
+            }
+            25%  {
+                border-radius:50% 0 0 0;
+                background:darksalmon;
+                transform:rotate(45deg);
+            }
+            50%  {
+                border-radius:50% 50% 0 0;
+                background:indianred;
+                transform:rotate(90deg);
+            }
+            75%  {
+                border-radius:50% 50% 50% 0;
+                background:lightcoral;
+                transform:rotate(135deg);
+            }
+            100% {
+                border-radius:50%;
+                background:darksalmon;
+                transform:rotate(180deg);
+            }
+        }
+        @keyframes square-to-circle {
+            0%  {
+                border-radius:0 0 0 0;
+                background:coral;
+                transform:rotate(0deg);
+            }
+            25%  {
+                border-radius:50% 0 0 0;
+                background:darksalmon;
+                transform:rotate(45deg);
+            }
+            50%  {
+                border-radius:50% 50% 0 0;
+                background:indianred;
+                transform:rotate(90deg);
+            }
+            75%  {
+                border-radius:50% 50% 50% 0;
+                background:lightcoral;
+                transform:rotate(135deg);
+            }
+            100% {
+                border-radius:50%;
+                background:darksalmon;
+                transform:rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
