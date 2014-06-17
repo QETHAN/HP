@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>flexbox</title>
+    <style>
+        .wrapper {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+
+            -webkit-flex-flow: row wrap;
+            flex-flow: row wrap;
+
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .wrapper > * {
+            padding: 10px;
+            flex: 1 100%;    /* flex-grow flex-shrink flex-basis 100% 独占一行*/
+        }
+
+        .header {
+            background: tomato;
+        }
+
+        .footer {
+            background: lightgreen;
+        }
+
+        .main {
+            text-align: left;
+            background: deepskyblue;
+        }
+
+        .aside-1 {
+            background: gold;
+        }
+
+        .aside-2 {
+            background: hotpink;
+        }
+
+        @media all and (min-width: 600px) {
+            .aside { flex: 1 auto; }
+        }
+
+        @media all and (min-width: 800px) {
+            .main    { flex: 2 0px; } /* shrink 0px 这个是关键。能和左右flex-box共同分配空间 */
+            .aside-1 { order: 1; }
+            .main    { order: 2; }
+            .aside-2 { order: 3; }
+            .footer  { order: 4; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">Header</header>
+        <article class="main">
+            <p>
+                斯波：我有联盟当之无愧的第一人！
+                波波：我有12巨头。
+                斯波：我有顶尖后卫闪电侠韦德！
+                波波：我有12巨头。
+                斯波：我有可卖萌可投关键球的波什！
+                波波：我有12巨头。
+                斯波：我有超音速双子星，总统，超级马里奥，蜗壳，鸟人，铁血队长！！！
+                波波：我有12巨头。。
+                斯波：靠！不是说篮球是5个人的游戏么？！！！
+                波波：是啊，但不是就这5个人啊。
+            </p>
+        </article>
+        <aside class="aside aside-1">Aside 1</aside>
+        <aside class="aside aside-2">Aside 2</aside>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>

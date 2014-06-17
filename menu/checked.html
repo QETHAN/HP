@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>checked</title>
+    <style>
+        input{display: none;}
+        label{display: block; line-height: 40px; border-bottom: 1px solid #ddd; cursor:pointer; font-size: 15px; font-weight: bold;}
+        .list > ul{display: none; -webkit-transition:all .5s linear;
+            -moz-transition:all .5s linear;
+            -ms-transition:all .5s linear;
+            -o-transition:all .5s linear;
+            transition:all .5s linear;}
+        #list1:checked + ul{display: block;}
+        #list2:checked + ul{display: block;}
+        #list3:checked + ul{display: block;}
+        #list4:checked + ul{display: block;}
+    </style>
+</head>
+<body>
+<div class="list">
+    <label for="list1">我的同学</label>
+    <input type="radio" name="list" id="list1" checked="chekced"/>
+    <ul>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+    </ul>
+    <label for="list2">我的同学</label>
+    <input type="radio" name="list" id="list2"/>
+    <ul>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+    </ul>
+    <label for="list3">我的同学</label>
+    <input type="radio" name="list" id="list3"/>
+    <ul>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+    </ul>
+    <label for="list4">我的同学</label>
+    <input type="radio" name="list" id="list4"/>
+    <ul>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+        <li><a href="">同学名字</a></li>
+    </ul>
+</div>
+
+</body>
+</html>
