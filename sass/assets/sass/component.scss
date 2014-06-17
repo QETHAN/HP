@@ -1,0 +1,9 @@
+@import "config";
+@import "mixins";
+$map: (key:11);
+.element {
+  color: hotpink;
+  @include respond-to(small) {
+    color: tomato;
+  }
+}

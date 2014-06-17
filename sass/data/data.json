@@ -1,0 +1,11 @@
+{
+    "colors": {
+        "red"  : "#c33",
+        "blue" : "#33c"
+    },
+
+    "breakpoints": {
+        "landscape" : "only screen and (orientation:landscape)",
+        "min-width"  : "600px"
+    }
+}

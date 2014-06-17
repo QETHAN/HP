@@ -1,0 +1,8 @@
+.element {
+  color: hotpink;
+}
+@media (min-width: 767px) {
+  .element {
+    color: tomato;
+  }
+}

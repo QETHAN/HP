@@ -24,11 +24,15 @@ module.exports = function(grunt) {
         // Task configuration.
         sass: {
             dist: {
-                files: {
-                    '<%= meta.deployPath %>style.css': '<%= meta.srcPath %>style.scss'
-                },
+                files: [{
+                    expand: true,
+                    cwd: './assets/sass',
+                    src: ['*.scss'],
+                    dest: '<%= meta.deployPath %>',
+                    ext: '.css'
+                }],
                 options: {
-                    sourcemap: 'true',
+                    sourcemap: 'true'
 //                    outputStyle: 'compressed'  //nested
                 }
             }
@@ -36,7 +40,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: [
-                    '<%= meta.srcPath %>style.scss'
+                    '<%= meta.srcPath %>**/*.scss'
                 ],
                 tasks: ['sass:dist']
             }
@@ -44,7 +48,7 @@ module.exports = function(grunt) {
     });
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task.
