@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Parallax</title>
+  <style>
+    [class*="bg_"] {
+      height: 50vh;
+      text-indent: -9999px;
+      background-attachment: fixed;
+      background-position: center center;
+      background-size: cover;
+
+      &:nth-child(2n) {
+         box-shadow: inset 0 0 1em #111;
+       }
+    }
+
+    .bg_foo {
+      background-image: url(parallax1.jpg);
+    }
+
+    .bg_bar {
+      background-image: url(parallax2.jpg);
+    }
+
+    .bg_baz {
+      background-image: url(parallax3.jpg);
+    }
+
+    .bg_bazz {
+      background-image: url(parallax1.jpg);
+    }
+  </style>
+</head>
+<body>
+  <div class="parallax">
+    <div class="bg_foo">foo</div>
+    <div class="bg_bar">foo</div>
+    <div class="bg_baz">foo</div>
+    <div class="bg_bazz">foo</div>
+  </div>
+</body>
+</html>

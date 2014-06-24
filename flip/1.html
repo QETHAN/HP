@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>CSS3 Flip</title>
+  <style>
+    .flip-container {
+      position: relative;
+      width: 300px;
+      height: 500px;
+      line-height: 500px;
+      -webkit-perspective: 1000;
+      -ms-perspective: 1000;
+      perspective: 1000;
+      text-align: center;
+      font-size: 30px;
+      color: #ffffff;
+    }
+    /*.horizontal.flip-container:hover .flipper,*/
+    /*.horizontal.flip-container.hover .flipper {*/
+      /*-webkit-transform: rotateY(180deg);*/
+    /*}*/
+
+    .flipper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .front,
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      -webkit-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: 0.6s;
+      -ms-transition: 0.6s;
+      transition: 0.6s;
+      -webkit-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+    .front {
+      z-index: 2;
+      background-color: #00AEE8;
+      -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #B94A48;
+      -webkit-transform: rotateY(-180deg);
+      -ms-transform: rotateY(-180deg);
+      transform: rotateY(-180deg);
+    }
+
+    .horizontal.flip-container:hover .back {
+      -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    .horizontal.flip-container:hover .front {
+      -webkit-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+
+    .verticle .back {
+      -webkit-transform: rotateX(180deg);
+      -ms-transform: rotateX(180deg);
+      transform: rotateX(180deg);
+    }
+
+    .verticle.flip-container .flipper {
+      -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+    }
+
+    .verticle.flip-container:hover .back {
+      -webkit-transform: rotateX(0deg);
+      -ms-transform: rotatex(0deg);
+      transform: rotateX(0deg);
+    }
+    .verticle.flip-container:hover .front {
+      -webkit-transform: rotateX(180deg);
+      -ms-transform: rotateX(180deg);
+      transform: rotateX(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="flip-container verticle" ontouchstart="this.classList.toggle('hover');">
+    <div class="flipper">
+      <div class="front">
+        前面
+      </div>
+      <div class="back">
+        后面
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>36kr UI</title>
+  <style>
+    *,
+    *:before,
+    *:after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    a {
+      text-decoration: none;
+    }
+    img {
+      border: none;
+      vertical-align: middle;
+    }
+    body {
+      background-color: #e3e3e3;
+    }
+    .kr-enter .btn {
+      border: 4px solid #fff;
+      width: 230px;
+      height: 56px;
+      font-size: 20px;
+      line-height: 48px;
+      position: relative;
+      color: #fff;
+      overflow: hidden;
+      z-index: 10;
+      margin-right: 30px;
+      display: inline-block;
+      background: transparent;
+    }
+    .btn.kr-btn {
+      text-align: center;
+    }
+
+    .kr-enter .btn:after {
+      content: "";
+      position: absolute;
+      -webkit-transition: all 0.3s ease;
+      -webkit-transition-delay: 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      background: #ef3d8d;
+      height: 0%;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      -o-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      width: 100%;
+      z-index: -1
+    }
+    .kr-enter .btn:hover {
+      border-color: #ef3d8d
+    }
+
+    .kr-enter .btn:hover:after {
+      height: 100%
+    }
+
+    .card-item {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      width: 280px;
+      margin: 100px 66px 23px 100px;
+    }
+    .card-item .cool {
+      position: relative;
+      height: 280px;
+    }
+    .card-item .cool img {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      z-index: 20;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      width: 260px;
+      height: 260px;
+      background: #fff;
+    }
+    .card-item .cool .front {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 280px;
+      height: 280px;
+      z-index: 8;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transition: all .4s ease 0s;
+      transition: all .4s ease 0s;
+    }
+    .card-item .cool .round {
+      position: relative;
+      z-index: 12;
+    }
+
+    .card-item .cool .round:before {
+      content: '';
+      border: 10px solid #e7ecfe;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      display: block;
+    }
+    .card-item .cool .round .slice {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      clip: rect(0, 140px, 280px, 0);
+    }
+    .card-item .cool .round .slice .pie {
+      position: absolute;
+      border: 11px solid #7b93e6;
+      width: 280px;
+      height: 280px;
+      clip: rect(0, 280px, 280px, 140px);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transform: rotate(348deg);
+    }
+    .card-item .cool .front .box {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 260px;
+      height: 260px;
+      overflow: hidden;
+    }
+    .card-item .cool .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 280px;
+      padding: 70px 50px;
+      z-index: 6;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background: #e7ecfe;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transform: rotateY(-180deg);
+      -moz-transform: rotateY(-180deg);
+      transform: rotateY(-180deg);
+      -webkit-transition: all .4s ease 0s;
+      transition: all .4s ease 0s
+    }
+    .card-item .cool .back .box {
+      display: table-cell;
+      vertical-align: middle;
+      height: 120px;
+      width: 180px;
+    }
+
+    .card-item .cool:hover .front {
+      z-index: 5;
+      opacity: 0;
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+
+    .card-items .cool:hover .back {
+      z-index: 10;
+      opacity: 1;
+      -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      background: #ec448d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="kr-enter">
+    <a class="btn kr-btn" href="#">
+      加入组织
+    </a>
+  </div>
+
+  <div class="card-item">
+    <div class="cool">
+      <div class="front">
+        <div class="round">
+          <div class="slice">
+            <div class="pie">
+
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img.jpg" width="280" height="280">
+        </div>
+      </div>
+      <div class="back">
+        <div class="box">
+          <div class="last">29天</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="jquery-1.11.1.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>
