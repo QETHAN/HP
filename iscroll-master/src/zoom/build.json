@@ -6,6 +6,6 @@
 	},
 	"replace": {
 		"refresh": "zoom/refresh.js",
-		"_translate": "\t\t\tthis.scrollerStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px) scale(' + this.scale + ') ' + this.translateZ;"
+		"_translate": "\t\t\tthis.scrollerStyle[utils.css.transform] = 'translate(' + x + 'px,' + y + 'px) scale(' + this.scale + ') ' + this.translateZ;"
 	}
 }

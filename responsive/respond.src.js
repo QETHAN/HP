@@ -14,7 +14,7 @@
     fakeBody.style.background = "none";
     fakeBody.appendChild(div);
     return function(q) {
-      div.innerHTML = '&shy;<style media="' + q + '"> #mq-test-1 { width: 42px; }</style>';
+      div.innerHTML = '&shy;<css media="' + q + '"> #mq-test-1 { width: 42px; }</css>';
       docElem.insertBefore(fakeBody, refNode);
       bool = div.offsetWidth === 42;
       docElem.removeChild(fakeBody);

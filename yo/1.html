@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>responsive</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="top-header">
+  <div class="container">
+    <div class="row">
+      <img class="logo" src="images/logo_ajax.png" width="87" height="26" alt="阿贾克斯中文站">
+      <strong class="title">中文官方网站</strong>
+    </div>
+  </div>
+</div>
+<div class="container" style="position: relative;z-index:1;">
+
+<div class="top-banner">
+  <img src="images/banner.jpg" width="960" height="120" alt="阿贾克斯">
+</div>
+
+<!--<div style="position: relative;z-index:1;">-->
+<div class="nav" style="position: relative;z-index: 1000;">
+  <ul class="main-nav clearfix">
+    <li class="main-nav-item first">
+      <a href="#">首页</a>
+    </li>
+    <li class="main-nav-item">
+      <a href="#">新闻</a>
+      <ul class="sub-nav">
+        <li class="sub-nav-item">
+          <a href="#">新闻列表</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">阿贾克斯电子杂志</a>
+        </li>
+      </ul>
+    </li>
+    <li class="main-nav-item">
+      <a href="#">TV</a>
+    </li>
+    <li class="main-nav-item">
+      <a href="#">一线队</a>
+      <ul class="sub-nav">
+        <li class="sub-nav-item">
+          <a href="#">一线队名单</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">教练组</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">战报</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">赛程</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">积分榜</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">伤病名单</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">训练日程</a>
+        </li>
+      </ul>
+    </li>
+    <li class="main-nav-item">
+      <a href="#">俱乐部</a>
+      <ul class="sub-nav">
+        <li class="sub-nav-item">
+          <a href="#">俱乐部历史</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">荣誉室</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">董事会</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">公司高层</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">Ajax Life</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">联系方式</a>
+        </li>
+      </ul>
+    </li>
+    <li class="main-nav-item">
+      <a href="#">其余球队</a>
+      <ul class="sub-nav">
+        <li class="sub-nav-item">
+          <a href="#">预备队</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">女足</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">各级梯队</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">未来球场</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">训练营</a>
+        </li>
+      </ul>
+    </li>
+    <li class="main-nav-item">
+      <a href="#">球场</a>
+      <ul class="sub-nav">
+        <li class="sub-nav-item">
+          <a href="#">浏览参观</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">官方商店</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">纵览球场</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">官方商店</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">无障碍设施</a>
+        </li>
+        <li class="sub-nav-item">
+          <a href="#">路线</a>
+        </li>
+      </ul>
+    </li>
+    <li class="main-nav-item">
+      <a href="#">票务信息</a>
+    </li>
+    <li class="main-nav-item last">
+      <a href="#">官方商店</a>
+    </li>
+  </ul>
+
+</div>
+<!-- 轮播图，比赛 -->
+<div class="mt-20 clearfix" style="position: relative; z-index: 0;">
+  <div class="carousel clearfix">
+    <div class="carousel-content pull-left">
+      <div class="carousel-item img_1 active">
+        <img src="images/1.jpg">
+      </div>
+      <div class="carousel-item img_2">
+        <img src="images/2.jpg">
+      </div>
+      <div class="carousel-item img_3">
+        <img src="images/1.jpg">
+      </div>
+      <div class="carousel-item img_4">
+        <img src="images/2.jpg">
+      </div>
+      <div class="carousel-item img_5">
+        <img src="images/1.jpg">
+      </div>
+    </div>
+    <div class="carousel-links pull-left">
+      <ul>
+        <li id="js-link-first" class="active">
+          <img class="js-img" src="images/link_active.png">
+          <a href="#">阿贾克斯签约穆里奇</a>
+        </li>
+        <li>
+          <img class="js-img" src="images/link_active.png">
+          <a href="#">阿贾克斯签约穆里奇</a>
+        </li>
+        <li>
+          <img class="js-img" src="images/link_active.png">
+          <a href="#">阿贾克斯签约穆里奇</a>
+        </li>
+        <li>
+          <img class="js-img" src="images/link_active.png">
+          <a href="#">阿贾克斯签约穆里奇</a>
+        </li>
+        <li>
+          <img class="js-img" src="images/link_active.png">
+          <a href="#">阿贾克斯签约穆里奇</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 球赛预告 -->
+  <div class="report">
+    <h2 class="title">下一场比赛</h2>
+
+    <div class="report-vs clearfix">
+      <div class="right pull-right">
+        <img src="images/report_right.png" width="64" height="34">
+
+        <p class="text-title">距离比赛开始还有</p>
+
+        <div class="counterdown">
+          <div class="counterdown-item mr-4">
+            <span>0</span>
+            <span>2</span>
+
+            <div class="time-desc">时</div>
+          </div>
+          <div class="counterdown-item mr-4">
+            <span>4</span>
+            <span>6</span>
+
+            <div class="time-desc">分</div>
+          </div>
+          <div class="counterdown-item">
+            <span>3</span>
+            <span>8</span>
+
+            <div class="time-desc">秒</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="left pull-left">
+        <img class="img-vs1" src="images/vs1.png" width="65" height="65">
+        <span class="text-vs">VS</span>
+        <img class="img-vs2" src="images/vs2.png" width="57" height="56">
+
+        <p class="desc">
+          <span>2014-8-3&nbsp;&nbsp;24:00</span>&nbsp;
+          克鲁伊夫盾呲我了&nbsp;&nbsp;VS &nbsp;&nbsp;阿贾克斯
+        </p>
+      </div>
+
+    </div>
+    <a class="link-previous" href="#">
+      上一场战报
+    </a>
+
+    <p class="ajax-weibo">
+      <a href="#">阿贾克斯中文官网微博</a>
+    </p>
+
+    <p class="ajax-schedule">
+      <a href="#">阿贾克斯赛程</a>
+    </p>
+  </div>
+</div>
+<!-- 轮播图，比赛 end -->
+
+<!--</div>-->
+
+<div class="mt-20 clearfix" style="position: relative;z-index: 0;">
+  <!-- 最新新闻 -->
+  <div class="card news mr-15">
+    <div class="header clearfix">
+      <h3 class="title">最新新闻</h3>
+      <a class="more" href="#">更多>></a>
+    </div>
+    <ul class="content">
+      <li class="news-item">
+        <span class="date">3/26</span>
+        <span class="title">阿贾克斯巴西世界杯</span>
+
+      </li>
+      <li class="news-item">
+        <span class="date">3/26</span>
+        <span class="title">阿贾克斯巴西世界杯</span>
+      </li>
+      <li class="news-item">
+        <span class="date">3/26</span>
+        <span class="title">阿贾克斯巴西世界杯</span>
+      </li>
+      <li class="news-item">
+        <span class="date">3/26</span>
+        <span class="title">阿贾克斯巴西世界杯</span>
+      </li>
+      <li class="news-item">
+        <span class="date">3/26</span>
+        <span class="title">阿贾克斯巴西世界杯</span>
+      </li>
+      <li class="news-item">
+        <span class="date">3/26</span>
+        <span class="title">阿贾克斯巴西世界杯</span>
+      </li>
+      <li class="news-item">
+        <span class="date">3/26</span>
+        <span class="title">阿贾克斯巴西世界杯</span>
+      </li>
+      <li class="news-item">
+        <span class="date">3/26</span>
+        <span class="title">阿贾克斯巴西世界杯</span>
+      </li>
+      <li class="news-item">
+        <span class="date">3/26</span>
+        <span class="title">阿贾克斯巴西世界杯</span>
+      </li>
+      <li class="news-item">
+        <span class="date">3/26</span>
+        <span class="title">阿贾克斯巴西世界杯</span>
+      </li>
+    </ul>
+  </div>
+  <!-- 最新新闻 end -->
+
+  <!-- 阿贾克斯TV -->
+  <div class="card tv mr-15">
+    <div class="header clearfix">
+      <h3 class="title">阿贾克斯TV</h3>
+      <a class="more" href="#">更多>></a>
+    </div>
+    <div>
+      <embed
+          src="http://player.video.qiyi.com/4fc32154c6e22aecb7db2d966ca00e9d/0/0/v_19rrhljvm4.swf-albumId=251709600-tvId=251709600-isPurchase=0-cnId=20"
+          allowFullScreen="true" quality="high" width="306" height="230" align="middle" allowScriptAccess="always"
+          type="application/x-shockwave-flash"></embed>
+    </div>
+    <div class="list">
+      <h2 class="title">
+        阿贾克斯本赛季十大进球
+      </h2>
+
+      <div class="imgs">
+        <img class="mr-10" src="">
+        <img class="mr-10" src="">
+        <img src="">
+      </div>
+    </div>
+  </div>
+  <!-- 阿贾克斯TV end -->
+
+  <!-- 积分榜 -->
+  <div class="card score">
+    <div class="header clearfix">
+      <h3 class="title">积分榜</h3>
+      <a class="more" href="#">更多>></a>
+    </div>
+    <div class="content">
+      <table>
+        <thead>
+        <tr class="tb-header">
+          <th>排名</th>
+          <th>球队</th>
+          <th>积分</th>
+          <th>场次</th>
+          <th>胜</th>
+          <th>平</th>
+          <th>负</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>阿贾克斯</td>
+          <td>71</td>
+          <td>34</td>
+          <td>20</td>
+          <td>11</td>
+          <td>3</td>
+        </tr>
+        <tr class="even">
+          <td>2</td>
+          <td>特温特</td>
+          <td>71</td>
+          <td>34</td>
+          <td>20</td>
+          <td>11</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>埃因霍温</td>
+          <td>71</td>
+          <td>34</td>
+          <td>20</td>
+          <td>11</td>
+          <td>3</td>
+        </tr>
+        <tr class="even">
+          <td>4</td>
+          <td>埃因霍温</td>
+          <td>71</td>
+          <td>34</td>
+          <td>20</td>
+          <td>11</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>埃因霍温</td>
+          <td>71</td>
+          <td>34</td>
+          <td>20</td>
+          <td>11</td>
+          <td>3</td>
+        </tr>
+        <tr class="even">
+          <td>6</td>
+          <td>埃因霍温</td>
+          <td>71</td>
+          <td>34</td>
+          <td>20</td>
+          <td>11</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>埃因霍温</td>
+          <td>71</td>
+          <td>34</td>
+          <td>20</td>
+          <td>11</td>
+          <td>3</td>
+        </tr>
+        <tr class="even">
+          <td>8</td>
+          <td>埃因霍温</td>
+          <td>71</td>
+          <td>34</td>
+          <td>20</td>
+          <td>11</td>
+          <td>3</td>
+        </tr>
+        <!-- 最后一个不显示数据，只做填充 -->
+        <tr class="last">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <!-- 最后一个不显示数据，只做填充 end -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- 积分榜 end -->
+</div>
+
+<div class="mt-20 clearfix">
+  <div class="ajax-ads mr-15">
+    <div class="ajax-ads-item mr-15">
+      <img src="images/a3.jpg" width="306" height="196">
+    </div>
+
+    <div class="ajax-ads-item card magazine">
+      <div class="header clearfix">
+        <h3 class="title">阿贾克斯电子杂志</h3>
+      </div>
+      <div class="inner">
+        <img src="images/a3.jpg" width="144" height="100">
+
+        <div class="content">
+          <h4 class="title">2014巴西世界杯</h4>
+
+          <p class="intro">
+            巴西世界杯巴西世界杯巴西世界杯巴西世巴西世界巴西世界巴西世界杯西世界杯巴西世巴西世界巴西世界巴西世界杯
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ajax-ads-item mr-15 mt-20">
+      <img src="images/a3.jpg" width="306" height="196">
+    </div>
+    <div class="ajax-ads-item mt-20">
+      <img src="images/a3.jpg" width="306" height="196">
+    </div>
+  </div>
+  <div class="card weibo">
+    <iframe width="306" height="460" class="share_self" frameborder="0" scrolling="no"
+            src="http://widget.weibo.com/weiboshow/index.php?language=&width=306&height=460&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=0&isWeibo=1&isFans=0&uid=1732678741&verifier=0af9e527&colors=6a040e,ffffff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+  </div>
+</div>
+<div class="brands clearfix">
+  <div class="brand-item aegon">
+    <img src="images/logo_aegon.gif" width="92" height="33" alt="aegon">
+  </div>
+  <div class="brand-item jupiler">
+    <img src="images/logo_jupiler.gif" width="110" height="51" alt="jupiler">
+  </div>
+  <div class="brand-item vriendenloterij">
+    <img src="images/logo_vriendenloterij.gif" width="110" height="38" alt="vriendenloterij">
+  </div>
+  <div class="brand-item adidas">
+    <img src="images/logo_adidas.gif" width="63" height="42" alt="adidas">
+  </div>
+</div>
+
+</div>
+
+<script src="js/jquery-1.6.js"></script>
+<script>
+  var $carouselLinks = $('.carousel-links li'),
+      $linkActiveBgImgs = $('.js-img'),
+      $carouselContent = $('.carousel-content');
+
+  function CarouselHandler() {
+    $carouselContent.css('top', 0);
+    $carouselLinks.removeClass('active');
+    $(this).addClass('active');
+
+    $carouselLinks.css('height', 52);
+    $(this).css('height', 92);
+
+    $linkActiveBgImgs.hide();
+    $(this).find('.js-img').show();
+
+    var index = $(this).index(),
+        topOffset = parseInt(index * 296);
+
+    $carouselContent.css('top', -topOffset);
+  }
+  ;
+
+  $carouselLinks.each(function (index, item) {
+    $(item).hover(CarouselHandler);
+  });
+
+
+  // 顶部导航
+  $('.main-nav-item').hover(function () {
+    $(this).find('.sub-nav').show('fast');
+  }, function () {
+    $(this).find('.sub-nav').slideUp('fast');
+  });
+
+
+</script>
+</body>
+</html>
