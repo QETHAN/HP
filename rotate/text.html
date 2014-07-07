@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>rotate text</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      margin: 50px 0 0 100px;
+      color: #e93a30;
+      font-weight: bold;
+    }
+    .roll-link {
+      display: inline-block;
+      overflow: hidden;
+      -webkit-perspective: 600px;
+      -moz-perspective: 600px;
+      -ms-perspective: 600px;
+      perspective: 600px;
+
+      -webkit-perspective-origin: 50% 50%;
+      -moz-perspective-origin: 50% 50%;
+      -ms-perspective-origin: 50% 50%;
+      perspective-origin: 50% 50%;
+    }
+
+    .roll-link:hover {text-decoration:none;}
+
+    .roll-link span {
+      display: block;
+      position: relative;
+      padding: 0 2px;
+
+      -webkit-transition: all 400ms ease;
+      -moz-transition: all 400ms ease;
+      -ms-transition: all 400ms ease;
+      transition: all 400ms ease;
+
+      -webkit-transform-origin: 50% 0%;
+      -moz-transform-origin: 50% 0%;
+      -ms-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+
+    .roll-link:hover span {
+      background: #e93a30;
+      -webkit-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+      -moz-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+      -ms-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+      transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+    }
+
+    .roll-link span:after {
+      content: attr(data-title);
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0 2px;
+      color: #fff;
+      background: #e93a30;
+
+      -webkit-transform-origin: 50% 0%;
+      -moz-transform-origin: 50% 0%;
+      -ms-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+
+      -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+      -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+      -ms-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+      transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+    }
+  </style>
+</head>
+<body>
+  <a class="roll-link">
+     <span data-title="twitter">
+       twitter
+     </span>
+  </a>
+</body>
+</html>
